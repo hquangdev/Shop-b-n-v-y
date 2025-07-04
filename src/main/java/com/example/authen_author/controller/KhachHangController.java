@@ -2,7 +2,7 @@ package com.example.authen_author.controller;
 
 import com.example.authen_author.dto.request.KhachHangRequest;
 import com.example.authen_author.dto.respone.KhachHangResponse;
-import com.example.authen_author.service.KhachHangService;
+import com.example.authen_author.service.Impl.KhachHangServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/api/khach-hang")
 public class KhachHangController {
     @Autowired
-    private KhachHangService khachHangService;
+    private KhachHangServiceImpl khachHangService;
 
     @PostMapping
     public ResponseEntity<?> createKhachHang(@RequestBody KhachHangRequest request) {
